@@ -11,7 +11,12 @@ Plug 'sindrets/diffview.nvim'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'https://github.com/hashivim/vim-terraform'
+Plug 'numToStr/Comment.nvim'
 call plug#end()
+
+lua <<EOF
+vim.g.mapleader = " "
+EOF
 
 setlocal ts=4 sts=4 sw=4 expandtab
 " YAML
