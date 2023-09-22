@@ -12,6 +12,8 @@ Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'https://github.com/hashivim/vim-terraform'
 Plug 'numToStr/Comment.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'folke/which-key.nvim', {'tag' : '*'}
 call plug#end()
 
 lua <<EOF

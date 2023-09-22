@@ -19,7 +19,7 @@ tree.setup {
 	view = {
 		number = true,
 		relativenumber = true,
-		width = 45,
+		width = 30,
 		-- preservce_window_proportions = true,
 	},
 	diagnostics = {
@@ -35,7 +35,7 @@ tree.setup {
 	},
 	actions = {
 		open_file = {
-			resize_window = false,
+			resize_window = true,
 		}
 	}
 }
