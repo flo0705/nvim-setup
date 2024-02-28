@@ -1,3 +1,6 @@
+set tabstop=4
+set shiftwidth=4
+
 call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
