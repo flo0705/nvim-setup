@@ -135,6 +135,18 @@ local mappings = {
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" }, -- Vertical Terminal
     },
 
+    b = {
+        name = "Buffer",
+        n = { "<cmd>bnext<cr>", "Next Buffer" }
+    },
+	
+	r = {
+		name = "Rust",
+		a = { "<cmd>RustLsp codeAction<cr>", "Code Action" },
+		h = { "<cmd>RustLsp hover actions<cr>", "Hover Action" },
+		r = { "<cmd>RustLsp runnables<cr>", "Runnables" }
+	}
+
 }
 
 which_key.setup(setup)

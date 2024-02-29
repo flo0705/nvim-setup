@@ -1,5 +1,6 @@
 set tabstop=4
 set shiftwidth=4
+set number
 
 call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'
@@ -17,11 +18,15 @@ Plug 'https://github.com/hashivim/vim-terraform'
 Plug 'numToStr/Comment.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'folke/which-key.nvim', {'tag' : '*'}
+Plug 'williamboman/mason.nvim', {'tag' : '*'}
+Plug 'williamboman/mason-lspconfig.nvim', {'tag' : '*'}
+Plug 'mrcjkb/rustaceanvim', {'tag' : '4.10.1'}
 call plug#end()
 
 lua <<EOF
 vim.g.mapleader = " "
 EOF
+
 
 setlocal ts=4 sts=4 sw=4 expandtab
 " YAML
