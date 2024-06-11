@@ -20,6 +20,7 @@ tree.setup {
 		number = true,
 		relativenumber = true,
 		width = 30,
+		adaptive_size = true
 		-- preservce_window_proportions = true,
 	},
 	diagnostics = {

@@ -18,7 +18,7 @@ local setup = {
         -- the presets plugin, adds help for a bunch of default keybindings in Neovim
         -- No actual key bindings are created
         presets = {
-            operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
+            operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
             motions = true, -- adds help for motions
             text_objects = true, -- help for text objects triggered after entering an operator
             windows = true, -- default bindings on <c-w>
@@ -84,7 +84,6 @@ local opts = {
 
 local mappings = {
 
-    ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" }, -- File Explorer
     ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },  -- Close current file
     ["m"] = { "<cmd>Mason<cr>", "Mason" }, -- LSP Manager
@@ -115,7 +114,7 @@ local mappings = {
     },
 
     s = {
-        name = "Search",
+		name = "Search",
         h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
         m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
         r = { "<cmd>Telescope registers<cr>", "Registers" },
@@ -137,7 +136,8 @@ local mappings = {
 
     b = {
         name = "Buffer",
-        n = { "<cmd>bnext<cr>", "Next Buffer" }
+        n = { "<cmd>bnext<cr>", "Next Buffer" },
+        d = { "<cmd>bd<cr>", "Delete Buffer" }
     },
 	
 	r = {
@@ -145,8 +145,16 @@ local mappings = {
 		a = { "<cmd>RustLsp codeAction<cr>", "Code Action" },
 		h = { "<cmd>RustLsp hover actions<cr>", "Hover Action" },
 		r = { "<cmd>RustLsp runnables<cr>", "Runnables" }
+	},
+	
+	c = {
+		name = "CocList",
+		d = { "<cmd>CocList diagnostics<cr>", "CocList diagnostics" },
+		c = { "<Plug>(coc-codeaction-cursor)", "CocList Codeaction Cursor" },
+		s = { "<Plug>(coc-codeaction-selected)", "CocList Codeaction Selected" },
+		f = { "<Plug>(coc-codeaction-source)", "CocList Codeaction File" },
+		lf = { "<Plug>(coc-fix-current)", "CocList Codeaction Line Fix" }
 	}
-
 }
 
 which_key.setup(setup)
